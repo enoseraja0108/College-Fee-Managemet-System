@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.12",
+      "includeFiles": [
+        "app.py",
+        "templates/**",
+        "static/**",
+        "rvce_fee.db"
+      ]
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
+}
